@@ -1,9 +1,11 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'next-themes'
+import '../styles/globals.scss'
 
 export default function App({ Component, pageProps }: AppProps) {
-  const aa = '123';
-  console.log('aa');
-  
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
