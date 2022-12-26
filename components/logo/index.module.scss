@@ -1,0 +1,13 @@
+.logo {
+  display: block;
+  margin-bottom: 0;
+  img {
+    width: 39px;
+    height: 38px;
+    border-radius: 23px;
+    @media (min-width: 480px) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}

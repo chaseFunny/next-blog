@@ -35,6 +35,14 @@ module.exports = {
     'import/extensions': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'no-underscore-dangle': 0,
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
   },
   globals: {
     JSX: true,

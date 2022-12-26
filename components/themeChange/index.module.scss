@@ -1,0 +1,21 @@
+.switch {
+  display: flex;
+  justify-content: flex-start;
+  width: 70px;
+  height: 36px;
+  padding: 4px;
+  background: var(--primary-liner);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.switch1 {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  border-radius: 40px;
+}

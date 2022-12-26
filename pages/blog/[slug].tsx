@@ -1,16 +1,19 @@
 /* eslint-disable react/destructuring-assignment */
 import { GetStaticPaths, GetStaticProps } from 'next'
+import Logo from '../../components/logo'
 
-export default function Home(props: any) {
+const Home = (props: { params: { slug: string } }) => {
   // console.log(props, 'props')
 
   return (
     <div>
       <h1>Create Next App</h1>
       <p>{props.params.slug}</p>
+      <Logo />
     </div>
   )
 }
+export default Home
 export const getStaticPaths: GetStaticPaths = async () => {
   const allPosts = [
     {
