@@ -20,16 +20,18 @@ interface ImageSelfProps {
 
 const ImageSelf = ({ srcArr, width, height, alt, caption }: ImageSelfProps): JSX.Element => {
   return (
-    <figure className={styles.wrapper}>
-      <div>
-        {srcArr.map(({ srcUrl, index }) => (
-          <PhotoView width={width} height={height} src={srcUrl} key={index}>
-            <Image role="img" src={srcUrl} width={width} height={height} alt={alt} priority />
-          </PhotoView>
-        ))}
-      </div>
-      {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
-    </figure>
+    <div>
+      {srcArr.map(({ srcUrl, index }) => (
+        <PhotoView width={width} height={height} src={srcUrl} key={index}>
+          <figure className={styles.wrapper}>
+            <div>
+              <Image role="img" src={srcUrl} width={width} height={height} alt={alt} priority />
+            </div>
+            {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
+          </figure>
+        </PhotoView>
+      ))}
+    </div>
   )
 }
 export default ImageSelf

@@ -36,6 +36,7 @@
   --greyLight-3: #bec8e4;
   --greyDark: #9baacf;
   --hoverBg: rgba(0, 0, 0, 0.1);
+  --popupBg: rgba(0,0,0,.45);
   // default
   --bg: #fff;
   --text: #000;
@@ -64,6 +65,7 @@
 }
 
 [data-theme='dark'] {
+  --popupBg: rgba(255, 255, 255, .45);
   --hoverBg: rgba(255, 255, 255, 0.2);
   --bg: #050505;
   --text: #fff;
