@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import cn from 'classnames'
@@ -15,6 +16,10 @@ import Styles from './index.module.scss'
  */
 
 const ThemeChange = () => {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
   const spring = {
     type: 'spring',
     stiffness: 700,
@@ -29,17 +34,22 @@ const ThemeChange = () => {
     const currTheme = theme === 'light' ? 1 : 0
     setTheme(variants[currTheme])
   }
+  // console.log(theme, 'theme')
+  // if (!theme) {
+  //   return <div />
+  // }
 
   return (
-    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-    <div
-      className={cn(Styles.switch, theme === 'dark' && Styles.switch1)}
-      onClick={() => {
-        toggleSwitch()
-      }}
-    >
-      <motion.div className={Styles.handle} layout transition={spring} />
-    </div>
+    mounted && (
+      <div
+        className={cn(Styles.switch, theme === 'dark' && Styles.switch1)}
+        onClick={() => {
+          toggleSwitch()
+        }}
+      >
+        <motion.div className={Styles.handle} layout transition={spring} />
+      </div>
+    )
   )
 }
 export default ThemeChange

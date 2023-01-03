@@ -1,3 +1,6 @@
+@import 'mac-scrollbar/dist/mac-scrollbar.css';
+@import 'react-photo-view/dist/react-photo-view.css';
+
 @font-face {
   font-weight: 400;
   font-family: 'SmileySans';
@@ -32,10 +35,12 @@
   --greyLight-2: #c8d0e7;
   --greyLight-3: #bec8e4;
   --greyDark: #9baacf;
+  --hoverBg: rgba(0, 0, 0, 0.1);
   // default
   --bg: #fff;
   --text: #000;
   --textTinted: rgba(0, 0, 0, 0.5); // 更浅的灰色
+  --textTintedBold: rgba(0, 0, 0, 0.6); // 更浅的灰色
   --brand: #974eeb; // 浅品牌色
   --brandActive: #761ddb; // 深品牌色
   --brandTinted: rgba(118, 29, 219, 0.2); // 更更浅的品牌色
@@ -59,11 +64,13 @@
 }
 
 [data-theme='dark'] {
-  --bg: #161515;
+  --hoverBg: rgba(255, 255, 255, 0.2);
+  --bg: #050505;
   --text: #fff;
   --textTinted: rgba(255, 255, 255, 0.5);
+  --textTintedBold: rgba(255, 255, 255, 0.6); // 更浅的灰色
   --headerBg: rgba(22, 21, 21, 0.6);
-  --border: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.2);
   --borderActive: rgba(255, 255, 255, 0.25);
   --boxBg: #1f1e1d;
   --star: #fef102;

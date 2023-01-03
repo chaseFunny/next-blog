@@ -2282,6 +2282,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+mac-scrollbar@^0.10.4:
+  version "0.10.4"
+  resolved "https://registry.npmmirror.com/mac-scrollbar/-/mac-scrollbar-0.10.4.tgz#4a5f0d6c7a85e3717c76ff1d3b233e7c13f96208"
+  integrity sha512-ZlAFUyo0gGDPLZDv790fNR34t8Fc2XbNOZblIHeoZVWvQ08LtXR541LdHbRKQRaV1LLLyeui4ScYgejo1jGIBg==
+
 map-obj@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
@@ -2904,6 +2909,11 @@ react-is@^16.12.0, react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.npmmirror.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-photo-view@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.npmmirror.com/react-photo-view/-/react-photo-view-1.2.3.tgz#436f81ad0a611dfaa43bbc72a4fef26a057b5aef"
+  integrity sha512-dtaFjU8nAB/rD8mxBaaJcvESlDOweAd1tmvXujS/d3oh1QyGew3xD4C02l46E6Dhn3Tshzl2+IM1h0MWV9nG7g==
 
 react@18.2.0:
   version "18.2.0"

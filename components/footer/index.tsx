@@ -17,6 +17,7 @@ const Footer = (): JSX.Element => {
   return (
     <div className={Styles.footer}>
       <div className={Styles.other}>
+        <span>其他：</span>
         {footerLinks.other.map(item => {
           if (item.type === 1) {
             return (
@@ -37,6 +38,7 @@ const Footer = (): JSX.Element => {
         })}
       </div>
       <div className={Styles.connect}>
+        <span>联系我：</span>
         {footerLinks.connect.map(item => {
           if (item.type === 1) {
             return (
