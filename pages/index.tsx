@@ -9,6 +9,16 @@ import styles from './index.module.scss'
 
 const Home = () => {
   const [btnState, setBtn] = useState(false)
+  const picArr = [
+    {
+      srcUrl: '/logo.png',
+      index: 0,
+    },
+    {
+      srcUrl: '/logo.png',
+      index: 1,
+    },
+  ]
   return (
     <Layout>
       <div>
@@ -27,7 +37,7 @@ const Home = () => {
               <img src="/logo.png" alt="" />
             </PhotoView>
           </div>
-          <ImageSelf src="/logo.png" width={480} height={480} alt="得意" caption="come from network" />
+          <ImageSelf srcArr={picArr} width={480} height={480} alt="得意" caption="come from network" />
           <Logo />
         </div>
       </div>
