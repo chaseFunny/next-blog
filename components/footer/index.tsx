@@ -53,10 +53,8 @@ const Footer = (): JSX.Element => {
             )
           }
           return (
-            <li key={item.name}>
-              <a href={item.img} target="_blank" rel="noopener noreferrer">
-                {item.name}
-              </a>
+            <li key={item.name} onClick={() => setCurrUrl(item.img || '')}>
+              {item.name}
             </li>
           )
         })}
