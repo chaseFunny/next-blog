@@ -1,46 +1,18 @@
 import { GetStaticProps } from 'next'
-import { useState } from 'react'
-import { PhotoView } from 'react-photo-view'
 import Layout from 'components/layout'
-import Switch from '../components/switchBtn/index'
-import ImageSelf from '../components/image'
-import Logo from '../components/logo'
-import styles from './index.module.scss'
+import Button from 'components/buttom'
+import PageHeader from 'components/pageHeader'
+import MyProject from 'components/myProject'
+import Styles from './index.module.scss'
 
 const Home = () => {
-  const [btnState, setBtn] = useState(false)
-  const picArr = [
-    {
-      srcUrl: '/logo.png',
-      index: 0,
-    },
-    {
-      srcUrl: '/logo.png',
-      index: 1,
-    },
-  ]
   return (
     <Layout>
-      <div>
-        <div>
-          <h1>
-            1
-            {/* Welcome to <a href="https://nextjs.org">Next.js!</a>
-          <p className={styles.aaa}>这个是得意黑字体吗？ This is a deyihei ？？？</p>
-          <p className={styles.bbb}>这个是得意黑字体吗？ This is a deyihei ？？？</p>
-          <p>这个是得意黑字体吗？ This is a deyihei ？？？</p>
-          <Switch title="哈哈哈哈" onChange={() => setBtn(!btnState)} checked={btnState} /> */}
-          </h1>
-          <Switch label="展示图片" checked={btnState} onChange={v => setBtn(v)} />
-          <div className={styles.imgSize}>
-            <PhotoView src="/logo.png">
-              <img src="/logo.png" alt="" />
-            </PhotoView>
-          </div>
-          <ImageSelf srcArr={picArr} width={480} height={480} alt="得意" caption="come from network" />
-          <Logo />
-        </div>
-      </div>
+      <PageHeader title="hello，很高兴遇见你！" description="我是蜗牛快跑，告诉自己慢一点没事，但不能止步不前；路虽远，行则将至">
+        <Button href="/about">关于我</Button>
+      </PageHeader>
+      <MyProject />
+      <div className={Styles.heibox} />
     </Layout>
   )
 }

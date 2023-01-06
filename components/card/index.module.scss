@@ -1,0 +1,28 @@
+.cardBox{
+  // width: 300px;
+  // height: 250px;
+  position: relative;
+  background-color: var(--brand);
+  color: var(--text);
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.transparent{
+  background-color: var(--cardBgTrans);
+}
+.large {
+  width: 100%;
+}
+.minimize{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 18px;
+  transform: translateY(calc(-20% - 1px));
+  color: var( --textTinted);
+}

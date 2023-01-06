@@ -1,0 +1,64 @@
+// 能力有限，本网站不兼容移动端
+.DemoBox {
+  width: 100%;
+  height: 100%;
+}
+.flexSmall{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+// .imgBox{
+//   width: 50px;
+//   height: 50px;
+//   image{
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+.desc{
+  margin-top: 12px;
+  color: var(--textTinted);
+  font-size: 12px;
+}
+.flexLarge{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content{
+  margin: 0 12px;
+}
+.input {
+  width: 300px;
+  max-width: 100%;
+  margin-left: 30px;
+  padding-left: 10px;
+  transition: all 150ms ease-out;
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: var(--brand);
+    outline: none;
+    box-shadow: 0 0 0 4px var(--brandTinted);
+  }
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  width: 18px;
+  transform: translateY(calc(-50% - 1px));
+
+  circle,
+  line {
+    opacity: 0.6;
+    stroke: var(--text);
+  }
+}
