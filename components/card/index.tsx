@@ -27,15 +27,21 @@ const Card = ({ type = 'default', children, currSizeFn }: CardProps): JSX.Elemen
       // onMouseOver={() => handleSize('small')}
       // onMouseOut={() => handleSize('default')}
       onClick={() => {
-        if (currSize === 'small') {
-          handleSize('large')
+        if (currSize === 'large') {
+          return
         }
+        handleSize('large')
       }}
       whileHover={{ scale: currSize === 'large' ? 1 : 1.1 }}
     >
       {currSize === 'large' && (
         // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-        <div onClick={() => handleSize('small')}>
+        <div
+          onClick={event => {
+            event.stopPropagation()
+            handleSize('small')
+          }}
+        >
           <Minimize className={Styles.minimize} />
         </div>
       )}

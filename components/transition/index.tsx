@@ -12,10 +12,10 @@ const variants = {
   enter: {
     opacity: 1,
     scale: 1,
-    transition: {
-      duration: 0.4,
-      ease: [0.61, 1, 0.88, 1],
-    },
+    // transition: {
+    //   duration: 0.4,
+    //   ease: [0.61, 1, 0.88, 1],
+    // },
   },
 }
 

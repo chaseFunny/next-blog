@@ -5,16 +5,18 @@ import Image from 'next/image'
 import _ from 'lodash'
 import cn from 'classnames'
 import Input from 'components/input'
-import { Search } from 'react-feather'
+import { Search, PlusSquare } from 'react-feather'
 import Button from 'components/buttom'
+import { useTheme } from 'next-themes'
+import { GlobalScrollbar } from 'mac-scrollbar'
 import Styles from './index.module.scss'
 
 interface TreasureType {
   currSize: string
 }
 const Treasure = ({ currSize = '' }: TreasureType): JSX.Element => {
-  console.log(currSize, 'currSize')
-  const dataList = localStorage.getItem('linkArr') || []
+  const { theme } = useTheme()
+  // const dataList = (localStorage && localStorage.getItem('linkArr')) || []
   const [addObj, setAdd] = useState({
     name: '',
     note: '',
@@ -26,8 +28,12 @@ const Treasure = ({ currSize = '' }: TreasureType): JSX.Element => {
   //   _.debounce((value: string) => dataList.search(value), 500),
   //   [],
   // )
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (e: { target: { value: any }; keyCode: number }) => {
     const searchString = e.target.value
+    if (e.keyCode === 13) {
+      console.log(e.keyCode, searchString)
+      return setCurrInputVal(searchString)
+    }
     if (searchString !== '') {
       // trackSearch(searchString) // Save what people are interested in reading
     }
@@ -49,7 +55,7 @@ const Treasure = ({ currSize = '' }: TreasureType): JSX.Element => {
             <Input className={Styles.input} value={currentSearch} onChange={handleInputChange} placeholder="输入你的备注" type="search" />
             <Search className={Styles.inputIcon} />
           </div>
-          <div className={Styles.list}>
+          {/* <div className={Styles.list}>
             <div className={Styles.add}>
               <Input
                 className={Styles.input}
@@ -62,6 +68,12 @@ const Treasure = ({ currSize = '' }: TreasureType): JSX.Element => {
               <Button type="submit" onClick={() => addLink()}>
                 提交
               </Button>
+            </div>
+          </div> */}
+          <div className={Styles.list}>
+            <GlobalScrollbar skin={theme as undefined} />
+            <div className={Styles.itemCard}>
+              <PlusSquare className={Styles.minimize} />
             </div>
           </div>
         </div>

@@ -38,18 +38,17 @@ const ThemeChange = () => {
   // if (!theme) {
   //   return <div />
   // }
-
-  return (
-    mounted && (
-      <div
-        className={cn(Styles.switch, theme === 'dark' && Styles.switch1)}
-        onClick={() => {
-          toggleSwitch()
-        }}
-      >
-        <motion.div className={Styles.handle} layout transition={spring} />
-      </div>
-    )
+  return mounted ? (
+    <div
+      className={cn(Styles.switch, theme === 'dark' && Styles.switch1)}
+      onClick={() => {
+        toggleSwitch()
+      }}
+    >
+      <motion.div className={Styles.handle} layout transition={spring} />
+    </div>
+  ) : (
+    <div className={Styles.switch} />
   )
 }
 export default ThemeChange

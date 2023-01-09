@@ -29,11 +29,12 @@
 }
 .content{
   margin: 0 12px;
+  flex-grow: 1;
 }
 .input {
   width: 300px;
   max-width: 100%;
-  margin-left: 30px;
+  // margin-left: 30px;
   padding-left: 10px;
   transition: all 150ms ease-out;
   &:hover,
@@ -47,12 +48,13 @@
 
 .inputWrapper {
   position: relative;
+  width: 70%;
 }
 
 .inputIcon {
   position: absolute;
-  top: 50%;
-  right: 14px;
+  top: 55%;
+  right: -25px;
   width: 18px;
   transform: translateY(calc(-50% - 1px));
 
@@ -61,4 +63,24 @@
     opacity: 0.6;
     stroke: var(--text);
   }
+}
+.itemCard {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+.list {
+  padding: 10px 8px;
+  max-height: 300px;
+  // overflow-y: scroll;
+}
+.minimize{
+  width: 30px;
+  height: 30px;
+  color: var( --textTinted);
 }

@@ -7,7 +7,7 @@ type InputProps = {
   placeholder?: string
   disabled?: boolean
   value: string | number
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void // eslint-disable-line
+  onChange: (e: ChangeEvent<HTMLInputElement> | any) => void // eslint-disable-line
   className?: string
 }
 
@@ -19,6 +19,7 @@ const Input = ({ type = 'text', placeholder, disabled, value, onChange, classNam
     className={cn(Styles.input, className)}
     disabled={disabled}
     onChange={onChange}
+    onKeyUp={onChange}
   />
 )
 
