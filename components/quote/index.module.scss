@@ -1,0 +1,16 @@
+.QuoteBox {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--primary);
+  cursor: pointer;
+  .words{
+    font-size: 1.5em;
+    font-style: italic;
+  }
+  .from {
+    font-style: italic;
+  }
+}
